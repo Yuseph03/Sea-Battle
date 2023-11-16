@@ -1,8 +1,13 @@
 {
     "root": true,
       "extends": ["airbnb"],
+      "files": [
+        "**/*.test.js",
+        "**/*.test.jsx"
+      ],
       "env": {
-        "browser": true
+        "browser": true,
+        "jest": true
       },
       "rules": {
         "no-alert": "off"
