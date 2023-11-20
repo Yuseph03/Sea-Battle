@@ -11,15 +11,19 @@ export default class Ship {
     get HitNum() {
         return this.hitNum;
     }
-    hit(hit) {
-        return this.hitNum += hit;
+    get IsSunk() {
+        return this.isSunk;
+    }
+    hit() {
+        return this.hitNum += 1;
     }
     ;
-    IsSunk() {
-        if (this.length === this.hitNum) {
+    checkIsSunk() {
+        if (this.Length === this.HitNum) {
             this.isSunk = true;
+            return this.IsSunk;
         }
-        return this.isSunk;
+        return this.IsSunk;
     }
     ;
 }

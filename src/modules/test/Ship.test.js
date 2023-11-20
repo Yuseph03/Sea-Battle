@@ -6,10 +6,13 @@ describe('Ship class methods', () => {
         expect(newShip.Length).toBe(4);
     });
     test('Ship is hit', () => {
-        newShip.hit(1);
+        newShip.hit();
         expect(newShip.HitNum).toBe(1);
     });
     test('Ship sinks', () => { 
-        expect(newShip.hit(4)).toBeTruthy();
+        newShip.hit();
+        newShip.hit();
+        newShip.hit();
+        expect(newShip.checkIsSunk()).toBeTruthy();
     });
 })
